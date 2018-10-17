@@ -1,12 +1,15 @@
 import React from 'react';
+import AddItemForm from './addItemForm';
 
 class Inventory extends React.Component {
     render() {
         return (
             <div className="inventory">
-                Inventory goes here.
+                <h2>Inventory</h2>
+                <AddItemForm addItem={this.props.addItem}/>
+                <button onClick={this.props.loadSampleItems}>Add Sample Items</button>
             </div>
-        )
+        );
     }
 }
 
